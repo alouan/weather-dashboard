@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Weather Dashboard</h1>
+            <p class="subtitle">Get weather updates for any location</p>
+        </div>
+        
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter city name..." />
+                <button id="searchBtn" class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="quick-buttons">
+                <button class="quick-btn" data-city="New York">New York</button>
+                <button class="quick-btn" data-city="London">London</button>
+                <button class="quick-btn" data-city="Tokyo">Tokyo</button>
+                <button class="quick-btn" data-city="Sydney">Sydney</button>
+            </div>
+        </div>
+        
+        <div id="loading" class="loading">
+            <i class="fas fa-spinner fa-spin"></i> Loading...
+        </div>
+        
+        <div id="errorMessage" class="error-message"></div>
+        
+        <div id="weatherContainer" class="weather-container"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
